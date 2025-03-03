@@ -110,9 +110,6 @@
 esphome:
   friendly_name: $friendly_name 
   name: $hostname
-  platform: ESP8266
-  board: d1_mini
-  esp8266_restore_from_flash: true
   on_boot:
     - priority: -200.0
       then:
@@ -171,7 +168,10 @@ esphome:
                       ("Open: ") +
                       (pos ? String(pos) + "%" : "")
                     ).c_str();
-
+## Board config
+esp8266:
+  board: d1_mini
+  restore_from_flash: true
 ## Substitutions
 substitutions:
   hostname: "fridans-rollo-1" #hostname/devicename/esphome sensors (keep lcase)
