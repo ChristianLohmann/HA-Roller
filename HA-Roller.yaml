@@ -440,7 +440,7 @@ stepper:
       number: $pinb 
       inverted: false
     sleep_pin:
-      number: GPIO4
+      number: $pinc 
       inverted: false
     max_speed: ${speed} # Speed of the motor
     acceleration: inf
